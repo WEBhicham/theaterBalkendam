@@ -10,7 +10,7 @@
         <script src="Assets/JavaScript/general.js" defer></script>
         <style>
             h1{
-                color: red;
+                color: blue;
             }
         </style>
     </head>

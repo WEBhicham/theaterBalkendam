@@ -35,11 +35,11 @@
                 <div class="event"></div>
                 <div class="event"></div>
                 <div class="top_vrienden"></div>
+                <div class="footer">
+
+                </div>
             </div>
 
-            <div class="footer">
-
-            </div>
         </div>
     </body>
 </html>

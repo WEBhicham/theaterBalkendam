@@ -1,0 +1,95 @@
+.welkom_text{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+.event_text{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.foto1{
+    width: 400px;
+    height: 300px;
+    margin-left: 25px;
+    margin-top: 5px;
+    float: left;
+}
+.foto2{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 55px;
+    left: 475px;
+}
+.technisch{
+    font-weight: bold;
+}
+.foto3 {
+    width: 400px;
+    height: 220px;
+    position: absolute;
+    top: 370px;
+    left: 25px;
+
+}
+.foto4 {
+    width: 400px;
+    height: 220px;
+    border: 1px #ca962b solid;
+    position: absolute;
+    top: 370px;
+    left: 475px;
+
+}
+
+.afmetingen{
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.lengte{
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 20px;
+}
+.tumbnail{
+    width: 400px;
+    height: 300px;
+}
+.tumbnail2{
+    width: 400px;
+    height: 220px;
+}
+html,
+body {
+    height: 100%;
+}
+.overlay {
+    position:absolute;
+    display:none;
+
+    /* color with alpha transparency */
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /* stretch to screen edges */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    display: none;
+    background-color: white;
+    text-align: center;
+
+    /* center it ? */
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -75px;
+}

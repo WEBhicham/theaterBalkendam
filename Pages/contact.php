@@ -12,7 +12,6 @@
 </head>
 <body>
 <div class="container">
-
     <header class="header">
         <div class="banner">
             <img class="logo" src="../Img/logo.png" alt="logo">
@@ -27,7 +26,6 @@
             </ul>
         </nav>
     </header>
-
     <div class="main">
         <p class="welkom_text">Hier vindt u onze contact gegevens</p>
         <br>

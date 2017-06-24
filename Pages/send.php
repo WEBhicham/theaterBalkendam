@@ -53,6 +53,7 @@
                     <input type="submit" name="submit" value="verzenden">
                 </form>
             </div>
+
             <footer class="footer">© Copyright Theater Balkendam 2017</footer>
         </div>
     </body>

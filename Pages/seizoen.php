@@ -16,25 +16,24 @@
                     $search = $k;
                 }
             }
+            if ($search === 'goed zo dorine') {
+                $search = "goed zo, dorine!";
+            }
             if ($search === 'reprise' || $search === 'try out' || $search === '6+') {
                 $search = "($search)";
             }
             if ($search === 'goed zo' || $search === 'korthals' || $search === 'louise korthals' || $search === 'met louise korthals') {
                 $search = "$search,";
             }
-            if ($search === 'seizoensopening' || strpos($search, 'fiets') !== false || $search === 'dorine' || $search === 'goed zo, dorine') {
+            if ($search === 'seizoensopening' || strpos($search, 'fiets') !== false && strpos($search,'fiets!') == false || strpos($search, 'dorine') !== false && strpos($search,'dorine!') == false || $search === 'dorine') {
                 $search = "$search!";
             }
             if (strpos($search, 'crescendo') !== false) {
                 $search = "$search-plus";
             }
-            if (strpos($search, 'mysterie') !== false) {
+            if (strpos($search, 'mysterie') !== false && $search !== 'mysterie...') {
                 $search = "$search...";
             }
-            if ($search === 'goed zo dorine') {
-                $search = "goed zo, dorine!";
-            }
-
             $search = $conn->real_escape_string($search);
             $query = "SELECT * FROM seizoen_2017_2018 WHERE naam = '$search' OR naam LIKE '% $search' OR naam LIKE '% $search %' OR naam LIKE '$search %' OR beschrijving = '$search' OR beschrijving LIKE '% $search' OR beschrijving LIKE '% $search %' OR beschrijving LIKE '$search %' OR genre = '$search' OR genre LIKE '% $search' OR genre LIKE '% $search %' OR genre LIKE '$search %' OR dag = '$search' ORDER BY jaar, maand, datum;";
         }else{
@@ -51,7 +50,7 @@
             $row['beschrijving'] = 'Geen beschrijving';
         }
         $out .= '<div class="event">';
-        $out .= "<img class='foto_eventen' src='" . $dir . $row['img'] . "' alt=''>";
+        $out .= "<img class='foto_eventen' src='" . $dir . $row['img'] . "' alt='Foto van " . $row['img'] . "'>";
         $out .= '<div class="datum">' . $row['dag']. ' ' . $row['maand'] . '-' . $row['datum'] . $row['jaar'] . '</div>';
         $out .= '<div class="naam_artiest">' . $row['naam'] . '</div>';
         $out .= '<div class="naam_show">' . $row['beschrijving'] . '</div>';
@@ -78,7 +77,7 @@
                 <div class="banner">
                     <img class="logo" src="../Img/logo.png" alt="logo">
                 </div>
-                <nav class="lol">
+                <nav>
                     <ul>
                         <li><a href="../index.php">Home</a></li>
                         <li><a href="seizoen.php" class="seizoen" >Seizoen 2017/2018</a></li>

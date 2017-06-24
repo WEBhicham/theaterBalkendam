@@ -1,0 +1,54 @@
+.welkom_text{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+.event_text{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.foto{
+    width: 400px;
+    height: 300px;
+    background: url("../../Img/theater.jpg");
+    background-size: cover;
+    margin-left: 25px;
+    margin-top: 20px;
+    float: left;
+}
+.gegevens{
+    width: 400px;
+    height: 300px;
+    border: 1px #ca962b solid;
+    position: absolute;
+    top: 70px;
+    left: 475px;
+}
+.contact{
+    font-weight: bold;
+}
+.route {
+    width: 850px;
+    height: 150px;
+    border: #ca962b 1px solid;
+    position: absolute;
+    top: 425px;
+    left: 25px;
+
+}
+.over{
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 50px;
+}
+.adres{
+    padding-left: 15px;
+    padding-bottom: 80px;
+}
+.beschrijving{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+}

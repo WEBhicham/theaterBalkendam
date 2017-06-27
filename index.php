@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
+            <header class="header">
                 <div class="banner">
                     <img class="logo" src="Img/logo.png" alt="logo">
                 </div>
@@ -26,7 +26,7 @@
                         <li><a href="Pages/contact.php">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
+            </header>
 
             <div class="main">
                 <p class="welkom_text">Welkom op de site van Theater Balkendam</p>

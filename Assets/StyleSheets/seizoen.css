@@ -24,6 +24,16 @@ a{
     margin-top: 25px;
     margin-left: 25px;
 }
+/*img {*/
+    /*width: 100px;*/
+    /*margin-top: 12px;*/
+/*}*/
+.foto_eventen {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
 .basis{
     width: 850px;
     max-height: 520px;
@@ -39,12 +49,13 @@ a{
     width: 200px;
     padding: 5px;
     margin: 10px 0 0 5px;
+    position: fixed;
 }
 .zoeken:focus {
     border: 2px solid #ca962b;
 }
 .event{
-    width: 545px;
+    width: 575px;
     height: 100px;
     border: #ca962b 1px solid;
     margin: 10px auto auto 210px;
@@ -72,7 +83,7 @@ a{
 .genre {
     position: relative;
     top: -40px;
-    left: 250px;
+    left: 300px;
 }
 .reseveren {
     background-color: #ca962b;
@@ -83,7 +94,7 @@ a{
     color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.50);
     position: relative;
-    left: 248px;
+    left: 360px;
 }
 .reseveren:active{
     box-shadow: none;
@@ -94,7 +105,7 @@ a{
 .plaatsen {
     position: relative;
     top: -45px;
-    left: 250px;
+    left: 300px;
 }
 .seizoen{
     font-weight: bold;

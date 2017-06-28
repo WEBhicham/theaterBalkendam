@@ -100,7 +100,7 @@ nav>ul>li>a{
     background: linear-gradient(to bottom, #9b1d21 0%,#ef3e3a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b1d21', endColorstr='#ef3e3a',GradientType=0 ); /* IE6-9 */
 }
-.footer{
+footer{
     position: relative;
     top: 660px;
     left: 25px;

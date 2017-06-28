@@ -82,7 +82,7 @@
 .top_vrienden{
     width: 275px;
     height: 475px;
-    border: 1px green solid;
+    border: 1px #ca962b solid;
     position: absolute;
     top: 110px;
     left: 600px;
@@ -97,5 +97,33 @@
     width: 100px;
     height: 100px;
     float: left;
+}
+.vriend_kop {
+    padding-top: 20px;
+    text-align: center;
+}
+.vriend_1 {
+    padding-top: 100px;
+    padding-left: 10px;
+}
+.vriend_2 {
+    padding-left: 10px;
+    padding-top: 75px;
+}
+.vriend_3 {
+    padding-left: 10px;
+    padding-top: 75px;
+}
+.bedrag_1 {
+    padding-top: 15px;
+    padding-left: 6.8em;
+}
+.bedrag_2 {
+    padding-left: 6.8em;
+    padding-top: 15px;
+}
+.bedrag_3 {
+    padding-left: 6.8em;
+    padding-top: 15px;
 }
 

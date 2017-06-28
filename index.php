@@ -68,7 +68,15 @@
                     <input class="reseveren" type="submit" value="Reserveer">
                     <div   class="plaatsen">155 vrije plaatsen over</div>
                 </div>
-                <div class="top_vrienden"></div>
+                <div class="top_vrienden">
+                    <p class="vriend_kop">De top 3 vrienden van het theater.</p>
+                    <p class="vriend_1">1. <span style="padding-left: 5em">Mike de Groot (sql)</span></p>
+                    <p class="bedrag_1">€ 1.259,- (sql)</p>
+                    <p class="vriend_2">2. <span style="padding-left: 5em">Heidi Bloemen (sql)</span></p>
+                    <p class="bedrag_2">€ 1.000,- (sql)</p>
+                    <p class="vriend_3">3. <span style="padding-left: 5em">Jan Keizer (sql)</span></p>
+                    <p class="bedrag_3">€ 897,50 (sql)</p>
+                </div>
             </div>
             <footer class="footer">© Copyright Theater Balkendam 2017</footer>
         </div>

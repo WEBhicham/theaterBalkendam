@@ -51,7 +51,7 @@
         }
         $out .= '<div class="event">';
         $out .= "<img class='foto_eventen' src='" . $dir . $row['img'] . "' alt='Foto van " . $row['img'] . "'>";
-        $out .= '<div class="datum">' . $row['dag']. ' ' . $row['maand'] . '-' . $row['datum'] . $row['jaar'] . '</div>';
+        $out .= '<div class="datum">' . $row['dag']. ' ' . $row['maand'] . '-' . $row['datum'] . '-' .  $row['jaar'] . '</div>';
         $out .= '<div class="naam_artiest">' . $row['naam'] . '</div>';
         $out .= '<div class="naam_show">' . $row['beschrijving'] . '</div>';
         $out .= '<div class="genre">' . $row['genre'] . '</div>';

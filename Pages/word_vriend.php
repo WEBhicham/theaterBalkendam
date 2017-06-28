@@ -46,29 +46,37 @@
             </header>
 
             <div class="main">
+                <div class="form__left">
                 <form action="" method="post">
                     <div class="form_inputs">
                         <input placeholder="Voornaam" title="Voornaam" name="voornaam" type="text">
                         <input placeholder="t.v." title="tv" name="tv" type="text">
-                        <select title="geslacht" name="gelacht">
-                            <option value="man">Man</option>
-                            <option value="vrouw">Vrouw</option>
-                            <option value="overig">Overig</option>
-                        </select>
+                        <div class="select__style--geslacht">
+                            <select title="geslacht" name="gelacht">
+                                <option value="man">Man</option>
+                                <option value="vrouw">Vrouw</option>
+                                <option value="overig">Overig</option>
+                            </select>
+                        </div>
                         <input placeholder="Achternaam" title="achternaam" name="achternaam" type="text">
                         <input placeholder="Telefoonnummer" title="telefoonnummer" name="telefoonnummer" type="text">
                         <input placeholder="E-mail" title="email" name="email" type="text">
                         <input placeholder="Donatie" title="donatie" name="donatie" type="text">
-                        <select title="betaalmethode" name="betaalmethode">
-                            <option value="" disabled selected>Kies uw betaalmethode</option>
-                            <option value="ideal">Ideal</option>
-                            <option value="paypal">Paypal</option>
-                            <option value="mastercard">Mastercard</option>
-                            <option value="visa">VISA</option>
-                        </select>
+                        <div class="select__style--betaalmethode">
+                            <select title="betaalmethode" name="betaalmethode">
+                                <option value="" disabled selected>Kies uw betaalmethode</option>
+                                <option value="ideal">Ideal</option>
+                                <option value="paypal">Paypal</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="visa">VISA</option>
+                            </select>
+                        </div>
                         <input type="submit">
                     </div>
-                    <textarea title=""  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                    <div class="form__right">
+                        <textarea title=""  name="" id="" cols="30" rows="10"></textarea>
+                    </div>
                 </form>
             </div>
 

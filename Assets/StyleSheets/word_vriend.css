@@ -1,19 +1,25 @@
-form {
+.main {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
 }
-.main{
-    height: 100vh;
+.form__left {
+    flex: 1;
+}
+.form__right {
+    flex: 1;
+}
+.form_inputs {
+    width: 350px;
+    flex-wrap: wrap;
+    display: flex;
 }
 input[type=text]{
     width: 300px;
-    height: 50px;
+    height: 35px;
+    margin: 0 0 10px 0 ;
 }
 input[name=tv]{
     width: 145px;
-    /*padding: 5px;*/
+    padding: 5px;
 }
 input[type=submit]{
     width: 200px;
@@ -25,37 +31,49 @@ input[type=submit]{
     text-align: center;
     line-height: 35px;
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.50);
+    margin-top: 10px;
 }
 input[type=submit]:hover {
     cursor: pointer;
 }
 input[type=submit]:active {
-    cursor: pointer;
     box-shadow: none;
 }
-.form_inputs {
-    width: 400px;
-    height: auto;
+.select__style--geslacht {
+    border: 1px solid #ccc;
+    width: 155px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
-input, select{
-    margin-top: 10px;
+.select__style--geslacht select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    height: 100%;
 }
-select{
-    width: 145px;
-    text-align: center;
-    border-radius: 0;
-    font-size: 1.5em;
+.select__style--geslacht select:focus {
+    outline: none;
 }
-select[name=betaalmethode] {
+.select__style--betaalmethode {
+    border: 1px solid #ccc;
     width: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.select__style--betaalmethode select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    height: 100%;
+}
+.select__style--betaalmethodestyle select:focus {
+    outline: none;
 }
 textarea {
-    margin-left: auto;
     width: 500px;
-    /*height: auto;*/
-}
-footer {
-    position: relative;
-    top: 750px;
-    left: 25px;
+    height: 300px;
+    resize: none;
 }

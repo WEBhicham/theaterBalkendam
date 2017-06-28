@@ -1,5 +1,61 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+.main{
+    height: 100vh;
+}
+input[type=text]{
+    width: 300px;
+    height: 50px;
+}
+input[name=tv]{
+    width: 145px;
+    /*padding: 5px;*/
+}
+input[type=submit]{
+    width: 200px;
+    height: 35px;
+    border:none;
+    border-radius: 10px;
+    background-color: #ca962b;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.50);
+}
+input[type=submit]:hover {
+    cursor: pointer;
+}
+input[type=submit]:active {
+    cursor: pointer;
+    box-shadow: none;
+}
+.form_inputs {
+    width: 400px;
+    height: auto;
+}
+input, select{
+    margin-top: 10px;
+}
+select{
+    width: 145px;
+    text-align: center;
+    border-radius: 0;
+    font-size: 1.5em;
+}
+select[name=betaalmethode] {
+    width: 300px;
+}
+textarea {
+    margin-left: auto;
+    width: 500px;
+    /*height: auto;*/
+}
 footer {
     position: relative;
-    top: 860px;
+    top: 750px;
     left: 25px;
 }

@@ -27,7 +27,7 @@
                 </nav>
             </header>
             <div class="main">
-                <a class="vriendworden" href="send.php">Wordt ook vriend</a>
+                <a class="vriendworden" href="word_vriend.php">Wordt ook vriend</a>
                 <p class="welkom_text">Hier vindt u alle vrienden van Theater Balkendam</p>
                 <br>
                 <div class="basis">
@@ -91,7 +91,7 @@
                     <div class="vriend5">Sjoers Soeter <span style="padding-left: 5em">€50,-</span> (sql)</div>
                 </div>
             </div>
-            <div class="footer">© Copyright Theater Balkendam 2017</div>
+            <footer>© Copyright Theater Balkendam 2017</footer>
         </div>
     </body>
 </html>

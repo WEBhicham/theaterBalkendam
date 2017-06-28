@@ -8,11 +8,11 @@
         $wachtwoord = $_POST['ww'];
 
         if (isset($gebruikersnaam, $wachtwoord) && !empty($gebruikersnaam) && !empty($wachtwoord)) {
-            $conn = mysqli_connect('localhost', 'root', 'root', 'theater_balkendam');
+            $conn = new mysqli('localhost', 'root', 'root', 'theater_balkendam');
             $query = 'SELECT * FROM admingegevens;';
-            $result = mysqli_query($conn, $query);
+            $res = $conn->query($conn, $query);
 
-            while ($row = mysqli_fetch_assoc($result)){
+            while ($row = $res->fetch_assoc()){
                     if($row['username'] === $gebruikersnaam && $row['password'] === $wachtwoord){
                         session_start();
                         $_SESSION['adminname'] = $gebruikersnaam;
@@ -24,7 +24,7 @@
                     }
             }
 
-            mysqli_close($conn);
+            $conn->close();
         } else{
             $err .= 'Uw gebruikersnaam en/of wachtwoord klopt niet.<br>';
         }

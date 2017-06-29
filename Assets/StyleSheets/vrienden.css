@@ -1,3 +1,6 @@
+.main {
+    overflow: hidden;
+}
 .vriendworden{
     width: 200px;
     height: 35px;
@@ -65,25 +68,11 @@
 }
 .vriend4{
     width: 380px;
-    height: 25px;
-    padding-top: 4px;
-    padding-left: 60px;
+    height: 500px;
     position: absolute;
     top: 500px;
-    left: 300px;
-    right: 10px;
     color: white;
-}
-.vriend5{
-    width: 380px;
-    height: 25px;
-    padding-top: 4px;
-    padding-left: 60px;
-    position: absolute;
-    top: 542px;
-    left: 300px;
-    right: 10px;
-    color: white;
+    left: 30%;
 }
 .foto1{
     width: 150px;
@@ -161,8 +150,15 @@
 .span2{
     padding-left: 21em;
 }
+.nietsnutten {
+    margin: 20px auto;
+    text-align: center;
+
+}
 .span3{
-    padding-left: 5em;
+    position: relative;
+    left: 0;
+    text-align: right;
 }
 
 

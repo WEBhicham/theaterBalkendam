@@ -17,34 +17,38 @@
         }else{
             $vriend = 'Vriendin';
         }
-        $out .= "<div class='vriend$i'>";
-        if ($i < 4) {
-            if ($i === 1) {
-                $out .= "<div class='foto$i'>";
-                $out .= "<p class='vriendvan$i'>";
-            }else{
-                $out .= "<div class='foto2'>";
-                $out .= "<p class='vriendvan2'>";
-            }
-            $out .= "$vriend<br>van";
-            $out .= "</p>";
-            $out .= "</div>";
-            $out .= "<div class='txt$i'>";
-            $out .= "<p class='info$i'>";
-            $out .= "Nummer $i vriend:<span class='span1'>" . $row['naam'] . "</span><br>";
-            $out .= "Bedrag donatie:<span class='span2'> " . $bedrag . "</span><br>";
-            $out .= "</p>";
-            if ($i === 1) {
-                $out .= "<p class='omschrijf$i'>";
-                $out .= $row['beschrijving'];
+        if ($i < 5) {
+            $out .= "<div class='vriend$i'>";
+            if ($i < 4) {
+                if ($i === 1) {
+                    $out .= "<div class='foto$i'>";
+                    $out .= "<p class='vriendvan$i'>";
+                } else {
+                    $out .= "<div class='foto2'>";
+                    $out .= "<p class='vriendvan2'>";
+                }
+                $out .= "$vriend<br>van";
                 $out .= "</p>";
+                $out .= "</div>";
+                $out .= "<div class='txt$i'>";
+                $out .= "<p class='info$i'>";
+                $out .= "Nummer $i vriend:<span class='span1'>" . $row['naam'] . "</span><br>";
+                $out .= "Bedrag donatie:<span class='span2'> " . $bedrag . "</span><br>";
+                $out .= "</p>";
+                if ($i === 1) {
+                    $out .= "<p class='omschrijf$i'>";
+                    $out .= $row['beschrijving'];
+                    $out .= "</p>";
+                }
+                $out .= "</div>";
+                $out .= "</div>";
             }
-            $out .= "</div>";
         }else{
+            $out .= "<p class='nietsnutten'>";
             $out .= $row['naam'];
             $out .= " <span class='span3'>" . $bedrag. "</span>";
+            $out .= "</p>";
         }
-        $out .= "</div>";
         $i++;
     }
 $conn->close();
@@ -56,7 +60,6 @@ $conn->close();
         <meta charset="utf-8">
         <link rel="stylesheet" href="../Assets/StyleSheets/general.css">
         <link rel="stylesheet" href="../Assets/StyleSheets/vrienden.css">
-        <script src="../Assets/JavaScript/general.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -78,9 +81,10 @@ $conn->close();
                 <a class="vriendworden" href="word_vriend.php">Wordt ook vriend</a>
                 <p class="welkom_text">Hier vindt u alle vrienden van Theater Balkendam</p>
                 <br>
-                <div class="basis">
-                    <p class="welkom_text">Onze huidige vrienden</p>
-                    <?php echo $out;?>
+                    <div class="basis">
+                        <p class="welkom_text">Onze huidige vrienden</p>
+                        <?php echo $out;?>
+                        </div>
                 </div>
             </div>
             <footer>© Copyright Theater Balkendam 2017</footer>

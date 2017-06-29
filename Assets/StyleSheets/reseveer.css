@@ -1,0 +1,26 @@
+.img {
+    width: 50%;
+    margin: 25px;
+    float: left;
+}
+p {
+    margin: 25px;
+}
+.main>a {
+    display: block;
+    background-color: #ca962b;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.50);
+    margin-left: 25px;
+    width: 200px;
+    text-align: center;
+}
+.main>a:active{
+    box-shadow: none;
+}
+.main>a:hover {
+    cursor: pointer;
+}

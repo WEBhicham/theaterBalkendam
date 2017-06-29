@@ -4,7 +4,7 @@
     $m = $today['mon'];
     $y = $today['year'];
     $out = $query = '';
-    $i = 0; // Zodra je hebt gefixt dat je meer dan 4 kan laten zien haal dit weg PS hij zal er nog steeds alleen 4 laten zien tenzij je iets zoekt
+    $i = 0; // Zodra je hebt gefixt dat je meer dan 4 kan laten zien haal dit weg PS. hij zal er nog steeds alleen 4 laten zien tenzij je iets zoekt
     $dir = "Img/";
     $conn = new mysqli('localhost', 'root', 'root', 'theaterbalkendam');
 
@@ -80,7 +80,7 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <input class="zoekfunctie" name="zoek" title="zoek" type="text" placeholder="Zoek op genre">
                 </form>
-                <?php echo $out;?>
+                    <?php echo $out;?>
                 <div class="top_vrienden">
                     <p class="vriend_kop">De top 3 vrienden van het theater.</p>
                     <p class="vriend_1">1. <span style="padding-left: 5em">Mike de Groot (sql)</span></p>

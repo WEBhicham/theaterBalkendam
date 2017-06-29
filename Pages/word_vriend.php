@@ -107,7 +107,7 @@
                             <input placeholder="Achternaam" title="achternaam" name="achternaam" type="text">
                             <input placeholder="Telefoonnummer" title="telefoonnummer" name="telnum" type="text">
                             <input placeholder="E-mail" title="email" name="email" type="text">
-                            <input placeholder="Donatie" title="donatie" name="donatie" type="text">
+                            <input placeholder="Donatie" title="donatie" name="donatie" type="number">
                             <div class="select__style--betaalmethode">
                                 <select title="betaalmethode" name="betaalmethode">
                                     <option value="" disabled selected>Kies uw betaalmethode</option>

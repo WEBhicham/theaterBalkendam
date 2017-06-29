@@ -57,18 +57,6 @@ $conn->close();
         <link rel="stylesheet" href="../Assets/StyleSheets/general.css">
         <link rel="stylesheet" href="../Assets/StyleSheets/vrienden.css">
         <script src="../Assets/JavaScript/general.js" defer></script>
-        <style>
-/*            Plaats deze style in de css pages aub ~Youri*/
-            .span1{
-                padding-left: 20em;
-            }
-            .span2{
-                padding-left: 21em;
-            }
-            .span3{
-                padding-left: 5em;
-            }
-        </style>
     </head>
     <body>
         <div class="container">

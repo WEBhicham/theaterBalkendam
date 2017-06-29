@@ -1,8 +1,11 @@
-.main {
+form {
     display: flex;
+    flex-direction: row;
+
 }
 .form__left {
-    flex: 1;
+    height: 600px;
+    padding: 20px;
 }
 .form__right {
     flex: 1;
@@ -12,7 +15,7 @@
     flex-wrap: wrap;
     display: flex;
 }
-input[type=text]{
+input[type=text], input[type=number]{
     width: 300px;
     height: 35px;
     margin: 0 0 10px 0 ;
@@ -76,4 +79,5 @@ textarea {
     width: 500px;
     height: 300px;
     resize: none;
+    margin: 20px 0 0 0 ;
 }

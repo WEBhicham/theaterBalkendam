@@ -1,23 +1,23 @@
 <?php
-    if(isset($_POST["email"], $_POST["naam"])){
-        $to = "hicham.elallouchi@ictmbo.nl";
-        $from = $_POST["email"];
-
-        $first_nameto = $_POST["naam"];
-        $first_name = "Naam: " . $_POST["naam"];
-
-        $subject = "Contact Bericht - Theater Balkendam";
-        $subject2 = "Kopie van uw contact verzoek - Theater Balkendam";
-
-        $message = "U heeft een contact verzoek van $first_nameto.\n\nE-mailadres van $first_nameto: $from\n\nVraag/Bericht:\n\n" . $_POST["bericht"];
-        $message2 = "Beste $first_nameto,\n\nHier is het kopie van u contact verzoek.\n\nVraag/Bericht:\n\n" . $_POST["bericht"] . "\n\nU verzoek wordt z.s.m. behandeld,";
-
-        $headers = "Afzender: $from";
-        $headers2 = "Afzender: $to";
-
-        mail($to,$subject,$message,$headers);
-        mail($from,$subject2,$message2,$headers2);
-    }
+//    if(isset($_POST["email"], $_POST["naam"])){
+//        $to = "hicham.elallouchi@ictmbo.nl";
+//        $from = $_POST["email"];
+//
+//        $first_nameto = $_POST["naam"];
+//        $first_name = "Naam: " . $_POST["naam"];
+//
+//        $subject = "Contact Bericht - Theater Balkendam";
+//        $subject2 = "Kopie van uw contact verzoek - Theater Balkendam";
+//
+//        $message = "U heeft een contact verzoek van $first_nameto.\n\nE-mailadres van $first_nameto: $from\n\nVraag/Bericht:\n\n" . $_POST["bericht"];
+//        $message2 = "Beste $first_nameto,\n\nHier is het kopie van u contact verzoek.\n\nVraag/Bericht:\n\n" . $_POST["bericht"] . "\n\nU verzoek wordt z.s.m. behandeld,";
+//
+//        $headers = "Afzender: $from";
+//        $headers2 = "Afzender: $to";
+//
+//        mail($to,$subject,$message,$headers);
+//        mail($from,$subject2,$message2,$headers2);
+//    }
 
 
     // PAS OP!!!
@@ -36,7 +36,7 @@
         $donatie = $_POST['donatie'];
         $betaalmethode = $_POST['betaalmethode'];
         $geslacht = $_POST['geslacht'];
-        $beschrijving = $_POST['geslacht'];
+        $beschrijving = $_POST['beschrijving'];
 
         $array = array('voornaam' => $voornaam, 'tussenvoegesel' => $tussenvoegsel,'achternaam' => $achternaam,'donatie' => $donatie, 'email' => $email,'telnum' => $telnum, 'betaalmethode' => $betaalmethode,'beschrijving' => $beschrijving,'geslacht' => $geslacht);
 
@@ -52,8 +52,8 @@
                 }
             }
             if($err === ''){
-                $query = "INSERT INTO vrienden (naam, email, telefoonnummer, geslacht, bedrag, betaalmethode, beschrijving) 
-              VALUES ('$voornaam $tussenvoegsel$achternaam', '$email', '$telnum', '$geslacht', '$donatie', '$betaalmethode', $beschrijving)";
+                $query = "INSERT INTO vrienden (naam, email, telnum, geslacht, bedrag, betaalmethode, beschrijving)
+              VALUES ('$voornaam $tussenvoegsel$achternaam', '$email', '$telnum', '$geslacht', '$donatie', '$betaalmethode', '$beschrijving')";
 
                 if ($conn->query($query)) {
                     header('Location:vrienden.php');
@@ -64,9 +64,34 @@
             $err .= 'U heeft met de code gekloot.<br>';
         }
     };
+
+
+
+//if ($_SERVER["REQUEST_METHOD"] === "POST") {
+//
+//    $voornaam = $_POST['voornaam'];
+//    $tussenvoegsel = $_POST['tv'] . ' ';
+//    $achternaam = $_POST['achternaam'];
+//    $email = $_POST['email'];
+//    $telnum = $_POST['telnum'];
+//    $donatie = $_POST['donatie'];
+//    $betaalmethode = $_POST['betaalmethode'];
+//    $geslacht = $_POST['geslacht'];
+//    $beschrijving = $_POST['geslacht'];
+//
+//    $conn = new mysqli("localhost", "root", "root", "theaterbalkendam");
+//
+//    $query = "INSERT INTO vrienden (naam, email, telnum, geslacht, bedrag, betaalmethode, beschrijving)
+//              VALUES ('$voornaam $tussenvoegsel$achternaam', '$email', '$telnum', '$geslacht', '$donatie', '$betaalmethode', '$beschrijving')";
+//
+//    $conn->query($query);
+//
+//    $conn->close();
+//
+//}
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
     <head>
         <title>CHECK</title>
@@ -107,7 +132,7 @@
                             <input placeholder="Achternaam" title="achternaam" name="achternaam" type="text">
                             <input placeholder="Telefoonnummer" title="telefoonnummer" name="telnum" type="text">
                             <input placeholder="E-mail" title="email" name="email" type="text">
-                            <input placeholder="Donatie" title="donatie" name="donatie" type="text">
+                            <input placeholder="Donatie" title="donatie" name="donatie" type="number">
                             <div class="select__style--betaalmethode">
                                 <select title="betaalmethode" name="betaalmethode">
                                     <option value="" disabled selected>Kies uw betaalmethode</option>
@@ -121,7 +146,7 @@
                         </div>
                     </div>
                     <div class="form__right">
-                        <textarea title=""  name="" id="" cols="30" rows="10"></textarea>
+                        <textarea title=""  name="beschrijving" id="" cols="30" rows="10"></textarea>
                     </div>
                 </form>
             </div>

@@ -2,7 +2,7 @@
     $out = '';
     $i = 1;
     $conn = new mysqli('localhost', 'root', 'root', 'theaterbalkendam');
-    $query = 'SELECT * FROM (SELECT * FROM vrienden ORDER BY bedrag ASC LIMIT 5) AS test ORDER BY bedrag DESC;';
+    $query = 'SELECT * FROM (SELECT * FROM vrienden ORDER BY bedrag DESC) AS test ORDER BY bedrag DESC;';
     $res = $conn->query($query);
 
     while($row = $res->fetch_assoc()){

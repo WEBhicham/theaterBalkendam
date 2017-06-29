@@ -4,7 +4,7 @@
     $m = $today['mon'];
     $y = $today['year'];
     $out = $query = '';
-    $i = 0;
+    $i = 0; // Zodra je hebt gefixt dat je meer dan 4 kan laten zien haal dit weg PS hij zal er nog steeds alleen 4 laten zien tenzij je iets zoekt
     $dir = "Img/";
     $conn = new mysqli('localhost', 'root', 'root', 'theaterbalkendam');
 
@@ -18,10 +18,10 @@
             $search = $conn->real_escape_string($search);
             $query = "SELECT * FROM seizoen_2017_2018 WHERE genre = '$search' AND ((jaar = $y AND datum >= $d AND maand >= $m) OR (jaar = $y AND maand > $m) OR jaar > $y) ORDER BY jaar, maand, datum;";
         }else{
-                $query = "SELECT * FROM seizoen_2017_2018 WHERE (jaar = $y AND datum >= $d AND maand >= $m) OR (jaar = $y AND maand > $m) OR jaar > $y ORDER BY jaar, maand, datum;";
+                $query = "SELECT * FROM seizoen_2017_2018 WHERE (jaar = $y AND datum >= $d AND maand >= $m) OR (jaar = $y AND maand > $m) OR jaar > $y ORDER BY jaar, maand, datum LIMIT 4;";
         }
     }else{
-        $query = "SELECT * FROM seizoen_2017_2018 WHERE (jaar = $y AND datum >= $d AND maand >= $m) OR (jaar = $y AND maand > $m) OR jaar > $y ORDER BY jaar, maand, datum;";
+        $query = "SELECT * FROM seizoen_2017_2018 WHERE (jaar = $y AND datum >= $d AND maand >= $m) OR (jaar = $y AND maand > $m) OR jaar > $y ORDER BY jaar, maand, datum LIMIT 4;";
     }
 
     $res = $conn->query($query);
@@ -39,10 +39,10 @@
             $out .= '<input class="reseveren" type="submit" value="Reserveer">';
             $out .= '<div class="plaatsen">' . rand(1, 200) . ' vrije plaatsen over</div>';
             $out .= '</div>';
-            $i++;
-            if ($i === 4){
-                break;
-            }
+            $i++;          // en dit
+            if ($i === 4){ // en dit ook
+                break;     // vergeet dit niet
+            }              // dit ook niet
     }
 
     $conn->close();

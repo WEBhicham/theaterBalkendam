@@ -2,7 +2,7 @@
     $out = '';
     $i = 1;
     $conn = new mysqli('localhost', 'root', 'root', 'theaterbalkendam');
-    $query = 'SELECT * FROM (SELECT * FROM vrienden ORDER BY bedrag DESC) AS test ORDER BY bedrag DESC;';
+    $query = 'SELECT * FROM (SELECT * FROM vrienden ORDER BY bedrag DESC LIMIT 5) AS test ORDER BY bedrag DESC;';
     $res = $conn->query($query);
 
     while($row = $res->fetch_assoc()){
@@ -57,6 +57,18 @@ $conn->close();
         <link rel="stylesheet" href="../Assets/StyleSheets/general.css">
         <link rel="stylesheet" href="../Assets/StyleSheets/vrienden.css">
         <script src="../Assets/JavaScript/general.js" defer></script>
+        <style>
+/*            Plaats deze style in de css pages aub ~Youri*/
+            .span1{
+                padding-left: 20em;
+            }
+            .span2{
+                padding-left: 21em;
+            }
+            .span3{
+                padding-left: 5em;
+            }
+        </style>
     </head>
     <body>
         <div class="container">

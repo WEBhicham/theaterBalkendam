@@ -65,7 +65,9 @@
 
                 </div>
             </div>
-            <footer>© Copyright Theater Balkendam 2017</footer>
+
+
+            <div class="footer">© Copyright Theater Balkendam 2017  </div>
         </div>
     </body>
 </html>

@@ -6,6 +6,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $search = strtolower($_POST['zoek']);
+
         if (strpos($search, '<') !== false || strpos($search, '>') !== false){
             $search = null;
         }
@@ -54,7 +55,7 @@
         $out .= '<div class="naam_artiest">' . $row['naam'] . '</div>';
         $out .= '<div class="naam_show">' . $row['beschrijving'] . '</div>';
         $out .= '<div class="genre">' . $row['genre'] . '</div>';
-        $out .= "<a class=\"reseveren\" href=\"reseveer.php?id=" . $row['idseizoen_2017_2018'] . "\">Reseveer</a>";
+        $out .= '<input class="reseveren" type="submit" value="Reserveer">';
         $out .= '<div class="plaatsen">' . rand(1, 200) . ' vrije plaatsen over</div>';
         $out .= '</div>';
     }

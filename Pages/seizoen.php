@@ -96,7 +96,7 @@
                     <?php echo $out;?>
                 </div>
             </div>
-            <footer>©Copyright Theater Balkendam 2017</footer>
+            <footer>© Copyright Theater Balkendam 2017</footer>
         </div>
     </body>
 </html>
